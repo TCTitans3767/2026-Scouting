@@ -50,6 +50,7 @@ import { getError, getTeamName, isFailed, TBAData } from "@/common/tba";
 import { LabelType } from "@/common/shared";
 import { computed, Ref } from "vue";
 import { useConfigStore, useTBAStore, useWidgetsStore } from "@/common/stores";
+import { watch } from "vue";
 
 interface Team {
   color: string;
@@ -69,7 +70,7 @@ const selectType = $ref(0);
 let eventKey = $ref("");
 const matchLevel = $ref(0);
 const matchNumber = $ref(1);
-const selectedTeam = $ref(0);
+const selectedTeam = $ref(parseInt(localStorage.getItem("selectedTeam") || "0"));
 
 const teamNumberManual = $ref(0);
 const teamColorManual = $ref("Red");
@@ -155,6 +156,9 @@ function loadTBAData() {
   matchesLoadStatus = "Loading...";
   tba.load(eventKey, "matches").then(value => updateStatus($$(matchesLoadStatus), $$(matches), value));
 }
+watch($$(selectedTeam), (newValue) => {
+  localStorage.setItem("selectedTeam", newValue.toString());
+});
 </script>
 
 <style>

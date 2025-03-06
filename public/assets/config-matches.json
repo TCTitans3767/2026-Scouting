@@ -1,5 +1,5 @@
 {
-  "heading": "Reefscape - 2025 v1",
+  "heading": "Reefscape - 2025 v1.2",
   "logo": "logo.png",
   "pages": [
     {
@@ -105,56 +105,28 @@
           "col": 4
         },
         {
-          "name": "Algae",
-          "type": "heading",
-          "col": 2
-        },
-        {
-          "name": "A1",
-          "type": "checkbox",
-          "col": 3,
-          "row": 8
-        },
-        {
-          "name": "A2",
-          "type": "checkbox",
-          "col": 4,
-          "row": 8
-        },
-        {
-          "name": "A3",
-          "type": "checkbox",
-          "col": 6,
-          "row": 8
-        },
-        {
-          "name": "Coral",
-          "type": "heading",
-          "col": 2
-        },
-        {
           "name": "C1",
           "type": "checkbox",
           "col": 3,
-          "row": 9
+          "row": 8
         },
         {
           "name": "C2",
           "type": "checkbox",
           "col": 4,
-          "row": 9
+          "row": 8
         },
         {
           "name": "C3",
           "type": "checkbox",
           "col": 6,
-          "row": 9
+          "row": 8
         },
         {
-          "name": "C Station",
+          "name": "Coral Station",
           "type": "checkbox",
-          "col": 5,
-          "row": 11
+          "col": 2,
+          "row": 8
         }
       ]
     },
@@ -286,18 +258,6 @@
           "height": 15
         },
         {
-          "name": "Assists",
-          "type": "checkbox",
-          "col": 2,
-          "align": "center"
-        },
-        {
-          "name": "Rescore",
-          "type": "spinbox",
-          "col":2,
-          "align": "center"
-        },
-        {
           "name": "Dropped Corals",
           "type": "spinbox",
           "col": 2,
@@ -312,10 +272,10 @@
           "name": "End Location",
           "type": "radio",
           "options": [
-            "Deep",
-            "Shallow",
+            "None",
             "Parked",
-            "None"
+            "Shallow",
+            "Deep"
           ],
           "default": 3
         },
@@ -327,18 +287,14 @@
           "name": "Robot Position",
           "type": "radio",
           "options": [
+            "None",
             "1",
             "2",
-            "3",
-            "None"
+            "3"
+            
           ],
           "default": 3
         },
-        {
-          "name": "Barge RP",
-          "type": "checkbox"
-        },
-
         {
           "name": "Mechanical Failures",
           "type": "text"

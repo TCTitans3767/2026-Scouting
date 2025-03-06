@@ -6,6 +6,7 @@
     </div>
     <div v-for="[i, page] of pages.entries()" :key="i" :class="{ link: true, active: i === shown }"
       @click="switchPage(i)">
+      
       {{ unref(page).title }}
     </div>
   </nav>
@@ -39,6 +40,7 @@ watchEffect(() => {
 });
 
 function switchPage(n: number) {
+  window.scrollTo(0, 0);
   // Skip validation if going backward
   if (n < shown) {
     shown = n;

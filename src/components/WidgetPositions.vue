@@ -28,7 +28,7 @@ const canvas = $ref<HTMLCanvasElement>();
 const divide = (val: number, dimension: DimensionName) => (val / (get(canvas, dimension) ?? 1)).toFixed(3);
 
 // The exported value
-const value = $computed(() => selections.map(c => `${divide(c.x, "width")},${divide(c.y, "height")}`));
+const value = $computed(() => selections.map(c => '(' + `${c.x},${c.y}`+')'));
 defineExpose({ index: useWidgetsStore().addWidgetValue(props.data, $$(value)) });
 
 // Load the image file
