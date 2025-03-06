@@ -150,6 +150,11 @@
             "name": "Comments",
             "type": "textarea",
             "colspan": 3
+          },
+          {
+            "name": "Get their autograph here",
+            "type": "label",
+            "file": "demo.png"
           }
         ]
       }

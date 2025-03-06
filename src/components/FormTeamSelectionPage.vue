@@ -71,6 +71,7 @@ let eventKey = $ref("");
 const matchLevel = $ref(0);
 const matchNumber = $ref(1);
 const selectedTeam = $ref(parseInt(localStorage.getItem("selectedTeam") || "0"));
+const matchNumber = $ref(parseInt(localStorage.getItem("matchNumber") || "0"));
 
 const teamNumberManual = $ref(0);
 const teamColorManual = $ref("Red");
@@ -158,6 +159,9 @@ function loadTBAData() {
 }
 watch($$(selectedTeam), (newValue) => {
   localStorage.setItem("selectedTeam", newValue.toString());
+});
+watch($$(matchNumber), (newValue) => {
+  localStorage.setItem("matchNumber", newValue+1);
 });
 </script>
 

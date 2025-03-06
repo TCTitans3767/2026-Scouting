@@ -102,7 +102,7 @@
           "name": "Common Scoring Locations",
           "type": "multicheckbox",
           "options": [
-            "trough",
+            "Trough",
             "L2",
             "L3",
             "L4",
@@ -124,7 +124,7 @@
           "type": "spinbox"
         },
         {
-          "name": "How Many thrown to ground",
+          "name": "How many thrown to ground",
           "type": "spinbox"
         },
         {
