@@ -94,7 +94,7 @@
         {
           "name": "Scoring Patterns",
           "type": "positions",
-          "file": "field.png",
+          "file": "reefscape.png",
           "allowMultiple": true,
           "colspan": 3
         },

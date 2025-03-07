@@ -258,10 +258,17 @@
           "height": 15
         },
         {
-          "name": "Dropped Corals",
+          "name": "Dropped Corals: Coral Station",
           "type": "spinbox",
           "col": 2,
           "align": "center"
+        },
+        {
+          "name": "Dropped Corals: Reef",
+          "type": "spinbox",
+          "col": 4,
+          "align": "center",
+          "row": 13
         }
       ]
     },
