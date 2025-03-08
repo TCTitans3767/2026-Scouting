@@ -80,6 +80,7 @@
             "name": "Can Pick Up",
             "type": "multicheckbox",
             "options": [
+              "Coral Station",
               "Ground Coral",
               "Ground Algae",
               "Reef 2.5",
@@ -110,6 +111,7 @@
             "name": "Preferred Pickup Location",
             "type": "dropdown",
             "options": [
+              "Coral Station",
               "Ground Coral",
               "Ground Algae",
               "Reef 2.5",
@@ -150,6 +152,10 @@
             "name": "Comments",
             "type": "textarea",
             "colspan": 3
+          },
+          {
+            "name": "Signutre (optional :P)",
+            "type": "heading"
           },
           {
             "name": "Get their autograph here",
