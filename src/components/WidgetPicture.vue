@@ -107,7 +107,7 @@ const handleTouch = () => {
 };
 
 // Konami Code (Mobile)
-const konamiString = "K2UP2DOWN2LEFTRIGHTBA";
+const konamiString = "K2U2D2LRBA";
 const checkKonamiCode = () => {
   if (inputCode.value.toUpperCase() === konamiString) {
     activateEasterEgg();
@@ -123,13 +123,13 @@ const startKonamiListener = () => {
   log("Double Click Detected. Listening for Konami Code.");
   konamiIndex = 0;
   window.addEventListener("keydown", konamiListener);
-  alert("Konami Code Activated! Enter the sequence.");
+  alert("Error");
 };
 
 // Activate Easter Egg
 const activateEasterEgg = () => {
   isEasterEggActive.value = true;
-  alert("Easter Egg Unlocked!");
+  alert("Good Boy");
 };
 
 // Video Navigation

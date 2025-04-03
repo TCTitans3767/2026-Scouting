@@ -50,15 +50,32 @@ function deleteData() {
 
   selectedRecords.clear();
 }
-
+function computeTeam(team){
+  if(team===-1) return "Bad-Scouter";
+  if(team===0) return "Red1";
+  if(team===1) return "Red2";
+  if(team===2) return "Red3";
+  if(team===3) return "Blue1";
+  if(team===4) return "Blue2";
+  if(team===5) return "Blue3";
+}
 function downloadData() {
   if (selectedEntry === undefined) return;
   if (downloadLink === undefined) return; // Make sure the link exists
-
+  let entryName = entries[selectedIdx] || "data";
+  let Team = computeTeam(parseInt(localStorage.getItem("selectedTeam") || "-1"));
+  if(entryName==="pits"){
+    downloadLink.href = widgets.makeDownloadLink({ header: selectedEntry.header, values: filterRecords(true) });
+    downloadLink.click();
+    return;
+  }
   // Generate the download link for the selected records, then trigger the download
   // If there are no records selected, they will all be included in the generated file
   downloadLink.href = widgets.makeDownloadLink({ header: selectedEntry.header, values: filterRecords(true) });
+  downloadLink.download = `${Team}-${entryName}.csv`;
   downloadLink.click();
+  
+  
 }
 
 function clearData() {

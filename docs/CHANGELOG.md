@@ -1,9 +1,10 @@
 # Black Hawks Scouting Changelog
 
 This document tracks the changes between Black Hawks Scouting versions. Dates are written in the MM/DD/YYYY format.
-
+## 2025.3
+  -Csv file change fix
 ## 2025.2
-  -Match number increments only after save and clear
+  -Match number increments only after save
 ## 2025.1
   - Cache
   - Positions update
