@@ -13,6 +13,13 @@
             "Proccesor Side",
             "Barge Side"
           ]
+        },
+        {
+          "name": "surf",
+          "type": "picture",
+          "file": "mcso.mp4",
+          "files": ["mcso.mp4","videoplayback.mp4"],
+          "col": 4
         }
       ]
     },
