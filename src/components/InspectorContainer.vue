@@ -71,7 +71,15 @@ watch(currentEntryName, (newEntry) => {
   }
 });
 
-
+function computeTeam(team){
+  if(team===-1) return "undefined";
+  if(team===0) return "Red1";
+  if(team===1) return "Red2";
+  if(team===2) return "Red3";
+  if(team===3) return "Blue1";
+  if(team===4) return "Blue2";
+  if(team===5) return "Blue3";
+}
 function deleteData() {
   if (!selectedEntry.value) return;
   if (!confirm("Delete this entry permanently?")) return;
@@ -97,9 +105,16 @@ function deleteData() {
 // Function to download data
 function downloadData() {
   if (!downloadLink.value || !selectedEntry.value) return;
-
+  let Team = computeTeam(parseInt(localStorage.getItem("selectedTeam") || "-1"));
   let entryName = currentEntryName.value;
-  let fileName = `${entryName}.csv`;
+  let fileName="";
+  if (entryName==="pits"){
+    fileName = `${entryName}.csv`;
+  }
+  else{
+    fileName = `${Team}-${entryName}.csv`;
+  }
+  
   let downloadData = { header: selectedEntry.value.header, values: selectedEntry.value.values };
 
   // Generate and trigger download
