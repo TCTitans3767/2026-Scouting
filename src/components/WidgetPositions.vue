@@ -35,7 +35,8 @@ const numberMap: Record<string, Point[]> = {
 const margin = 5;
 
 // The exported value
-const value = $computed(() => selections.map(({ x, y }) => getNumberAtPoint({ x, y }) ?? `(${x},${y})`));
+// const value = $computed(() => selections.map(({ x, y }) => getNumberAtPoint({ x, y }) ?? `(${x},${y})`));
+const value = $computed(() => selections.map(({ x, y }) => `(${x},${y})`));
 defineExpose({ index: useWidgetsStore().addWidgetValue(props.data, $$(value)) });
 
 // Load the image file
@@ -81,15 +82,15 @@ function setDimensions(a: DimensionName, b: DimensionName) {
   else canvas[a] = image[a];
 }
 
-//Correspondencia numérica con margen de error
-function getNumberAtPoint(point: Point): string | null {
-  for (const [num, points] of Object.entries(numberMap)) {
-    if (points.some(p => Math.abs(p.x - point.x) <= margin && Math.abs(p.y - point.y) <= margin)) {
-      return num;
-    }
-  }
-  return null;
-}
+// //Correspondencia numérica con margen de error
+// function getNumberAtPoint(point: Point): string | null {
+//   for (const [num, points] of Object.entries(numberMap)) {
+//     if (points.some(p => Math.abs(p.x - point.x) <= margin && Math.abs(p.y - point.y) <= margin)) {
+//       return num;
+//     }
+//   }
+//   return null;
+// }
 
 // Adds a new selection to the array.
 function click(event: MouseEvent) {

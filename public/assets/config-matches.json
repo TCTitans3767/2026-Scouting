@@ -1,5 +1,5 @@
 {
-  "heading": "Reefscape - 2025 v3",
+  "heading": "Rebuilt - 2026 v1",
   "logo": "logo.png",
   "pages": [
     {
@@ -37,7 +37,8 @@
         {
           "name": "Fuel Scored",
           "type": "spinbox",
-          "col": 3
+          "col": 3,
+          "batch": true
         },
         {
           "name": "Pick-up Locations",
@@ -70,7 +71,8 @@
         {
           "name": "fuel scored",
           "type": "spinbox",
-          "col": 3
+          "col": 3,
+          "batch": true
         },
         {
           "name": "Cycles during Activation",
