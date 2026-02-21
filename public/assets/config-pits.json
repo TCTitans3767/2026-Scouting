@@ -86,16 +86,20 @@
           },
           {
             "name": "Hopper Size",
-            "type": "spinbox"
+            "type": "number"
             
           },
           {
-            "name": "Scoring Methods",
+            "name": "Aiming",
             "type": "multicheckbox",
             "options": [
               "Manual",
               "Auto"
             ]
+          },
+          {
+            "name": "Balls/Second",
+            "type": "number"
           },
           {
             "name": "Climb Time",

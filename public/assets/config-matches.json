@@ -37,6 +37,23 @@
           "batch": true
         },
         {
+          "name": "Assists",
+          "type": "heading",
+          "col":3
+        },
+        {
+          "name" : "Passed",
+          "type": "spinbox",
+          "col": 3,
+          "batch": true
+        },
+        {
+          "name" : "Pushed",
+          "type": "spinbox",
+          "col": 3,
+          "batch": true
+        },
+        {
           "name": "Pick-up Locations",
           "type": "heading",
           "col": 3
@@ -55,7 +72,49 @@
           "name": "Depot",
           "type": "checkbox",
           "col": 3
+        },
+        {
+          "name": "Climb",
+          "type": "heading",
+          "col": 3
+        },
+        {
+          "name": "Location",
+          "type": "radio",
+          "options": [
+            "None",
+            "Front",
+            "Back"
+            
+          ],
+          "col": 3,
+          "default": 0
+        },
+        {
+          "name": "Position",
+          "type": "radio",
+          "options": [
+            "None",
+            "Left",
+            "Center",
+            "Right"
+            
+          ],
+          "col": 3,
+          "default": 0
+        },
+        {
+          "name": "Flip Climb",
+          "col": 3,
+
+          "type": "checkbox"
+        },
+        {
+          "name": "Failed Climb",
+          "col": 3,
+          "type": "checkbox"
         }
+
       ]
     },
 
@@ -68,17 +127,40 @@
           "type": "heading",
           "col":3
         },
-
         {
-          "name": "fuel scored",
+          "name": "Fuel Scored: Transition Period",
           "type": "spinbox",
           "col": 3,
           "batch": true
         },
         {
-          "name": "Cycles during Activation",
+          "name": "Fuel Scored: Activation 1",
           "type": "spinbox",
-          "col": 3
+          "col": 3,
+          "batch": true
+        },
+        {
+          "name": "Fuel Scored: Activation 2",
+          "type": "spinbox",
+          "col": 3,
+          "batch": true
+        },
+        {
+          "name": "Assists",
+          "type": "heading",
+          "col":3
+        },
+        {
+          "name" : "Passed",
+          "type": "spinbox",
+          "col": 3,
+          "batch": true
+        },
+        {
+          "name" : "Pushed",
+          "type": "spinbox",
+          "col": 3,
+          "batch": true
         },
         {
           "name": "Pickup Locations",
@@ -86,24 +168,25 @@
           "col":3
         },
         {
-          "name": "Team Side/Ground",
-          "type": "spinbox",
-          "col": 3
+          "name": "Ground",
+          "col": 3,
+          "type": "checkbox"
         },
         {
           "name": "Human Player Station",
-          "type": "spinbox",
-          "col": 3
+          "col": 3,
+          "type": "checkbox"
         },
         {
           "name": "Depot",
-          "type": "spinbox",
-          "col": 3
+          "col": 3,
+          "type": "checkbox"
         },
         {
           "name": "Team Side During Activation",
           "type": "checkbox",
-          "col": 3
+          "col": 3,
+          "batch": true
         }
 
       ]
@@ -112,22 +195,21 @@
       "name": "Endgame",
       "widgets": [
         {
-          "name": "End Location",
-          "type": "radio",
-          "options": [
-            "None",
-            "Parked",
-            "Shallow",
-            "Deep"
-          ],
-          "default": 3
+          "name": "Scoring",
+          "type": "heading"
         },
         {
-          "name": "Failed Climb",
-          "type": "checkbox"
+          "name": "Fuel Scored",
+          "type": "spinbox",
+          
+          "batch": true
         },
         {
-          "name": "Robot Position",
+          "name": "Climb",
+          "type": "heading"
+        },
+        {
+          "name": "Level",
           "type": "radio",
           "options": [
             "None",
@@ -136,12 +218,49 @@
             "3"
             
           ],
-          "default": 3
+          "default": 0
+        },
+        {
+          "name": "Location",
+          "type": "radio",
+          "options": [
+            "None",
+            "Front",
+            "Back"
+            
+          ],
+          "default": 0
+        },
+        {
+          "name": "Position",
+          "type": "radio",
+          "options": [
+            "None",
+            "Left",
+            "Center",
+            "Right"
+            
+          ],
+          "default": 0
+        },
+        {
+          "name": "Flip Climb",
+
+          "type": "checkbox"
+        },
+        {
+          "name": "Failed Climb",
+          "type": "checkbox"
+        },
+        {
+          "name": "Submission",
+          "type": "heading"
         },
         {
           "name": "Mechanical Failures",
           "type": "text"
         },
+        
         {
         "name": "Scouter Name",
           "type": "text",
