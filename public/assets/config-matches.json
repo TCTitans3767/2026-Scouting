@@ -1,5 +1,5 @@
 {
-  "heading": "Reefscape - 2025 v1",
+  "heading": "Rebuilt - 2026 v1",
   "logo": "logo.png",
   "pages": [
     {
@@ -7,155 +7,114 @@
       "widgets": [
         {
          "name": "Starting Position",
-          "type": "dropdown",
-          "options": [
-            "Center",
-            "Proccesor Side",
-            "Barge Side"
-          ]
+          "type": "positions",
+          "file": "field.png"
+        },
+        {
+          "name": "surf",
+          "type": "picture",
+          "file": "https://drive.google.com/file/d/145idST6FORcsL40eWDsClB2ZIA8DzdX5/preview",
+          "files": ["https://drive.google.com/file/d/145idST6FORcsL40eWDsClB2ZIA8DzdX5/preview","https://drive.google.com/file/d/1hceLKC-ppZSNWcEXg0GwMDYCe5CgiXWR/preview", "https://drive.google.com/file/d/1kI2tcyWOBP9137K8olPih6rMVRKCAezS/preview"],
+          "col": 4
         }
       ]
     },
     {
       "name": "Autonomous",
       "widgets": [
+        
+        
         {
-          "name": "Left Starting Zone",
-          "type": "checkbox",
-          "col":4
-        },
-        {
-          "type": "spacer",
-          "height": 20
-        },
-        {
-          "name": "Remove Algae",
+          "name":"Scoring",
           "type": "heading",
-          "prefix": "Auto",
-          "col": 2
-        },
-        {
-          "name": "L2.5",
-          "type": "spinbox",
-          "prefix": "Auto",
-          "row": 3,
           "col": 3
         },
+        
         {
-          "name": "L3.5",
+          "name": "Fuel Scored",
           "type": "spinbox",
-          "prefix": "Auto",
-          "row": 3,
-          "col": 5
-        },
-        {
-          "name": "Scoring Algae",
-          "type": "heading",
-          "col":2
-        },
-        {
-          "name": "Net",
-          "type": "spinbox",
-          "prefix": "Auto",
           "col": 3,
-          "row": 4
+          "batch": true
         },
         {
-          "name": "Proccesor",
-          "type": "spinbox",
-          "prefix": "Auto",
-          "col": 5,
-          "row" :4
-        },
-        {
-          "name": "Scoring Coral",
+          "name": "Assists",
           "type": "heading",
-          "col": 2
+          "col":3
         },
         {
-          "name": "Trough Corals",
+          "name" : "Passed",
           "type": "spinbox",
-          "prefix": "Auto",
-          "row": 5,
-          "col": 3
+          "col": 3,
+          "batch": true
         },
         {
-          "name": "L2 Corals",
+          "name" : "Pushed",
           "type": "spinbox",
-          "prefix": "Auto",
-          "row": 5,
-          "col": 5
-        },
-        {
-          "name": "L3 Corals",
-          "type": "spinbox",
-          "prefix": "Auto",
-          "col": 3
-        },
-        {
-          "name": "L4 Corals",
-          "type": "spinbox",
-          "prefix": "Auto",
-          "col": 5,
-          "row": 6
+          "col": 3,
+          "batch": true
         },
         {
           "name": "Pick-up Locations",
           "type": "heading",
-          "col": 4
+          "col": 3
         },
         {
-          "name": "Algae",
+          "name": "Went to Middle",
+          "type": "checkbox",
+          "col":3
+        },
+        {
+          "name": "Human Player Station",
+          "type": "checkbox",
+          "col": 3
+        },
+        {
+          "name": "Depot",
+          "type": "checkbox",
+          "col": 3
+        },
+        {
+          "name": "Climb",
           "type": "heading",
-          "col": 2
+          "col": 3
         },
         {
-          "name": "A1",
-          "type": "checkbox",
+          "name": "Location",
+          "type": "radio",
+          "options": [
+            "None",
+            "Front",
+            "Back"
+            
+          ],
           "col": 3,
-          "row": 8
+          "default": 0
         },
         {
-          "name": "A2",
-          "type": "checkbox",
-          "col": 4,
-          "row": 8
-        },
-        {
-          "name": "A3",
-          "type": "checkbox",
-          "col": 6,
-          "row": 8
-        },
-        {
-          "name": "Coral",
-          "type": "heading",
-          "col": 2
-        },
-        {
-          "name": "C1",
-          "type": "checkbox",
+          "name": "Position",
+          "type": "radio",
+          "options": [
+            "None",
+            "Left",
+            "Center",
+            "Right"
+            
+          ],
           "col": 3,
-          "row": 9
+          "default": 0
         },
         {
-          "name": "C2",
-          "type": "checkbox",
-          "col": 4,
-          "row": 9
+          "name": "Flip Climb",
+          "col": 3,
+
+          "type": "checkbox"
         },
         {
-          "name": "C3",
-          "type": "checkbox",
-          "col": 6,
-          "row": 9
-        },
-        {
-          "name": "C Station",
-          "type": "checkbox",
-          "col": 5,
-          "row": 11
+          "name": "Failed Climb",
+          "col": 3,
+          "type": "checkbox"
         }
+
       ]
     },
 
@@ -164,185 +123,144 @@
       "name": "Teleop",
       "widgets": [
         {
-          "name": "Picked Up From",
-          "type": "heading",
-          "align": "center",
-          "col": 3
-        },
-        {
-          "name": "Algae",
-          "type": "heading",
-          "align": "center",
-          "col": 3,
-          "row":2
-        },
-        {
-          "name": "Ground",
-          "type": "spinbox",
-          "col": 1,
-          "row": 3
-        },
-        {
-          "name": "Reef L2.5",
-          "type": "spinbox",
-          "row": 3,
-          "col": 3
-        },
-        {
-          "name": "Reef L3.5",
-          "type": "spinbox",
-          "row": 4,
-          "col": 2
-        },
-        {
-          "name": "Coral",
-          "type": "heading",
-          "row": 5,
-          "col": 3,
-          "align": "center"
-        },
-        {
-          "name": "Ground",
-          "type": "spinbox",
-          "col": 1,
-          "row": 6
-        },
-        {
-          "name": "Coral Station",
-          "type": "spinbox",
-          "row": 6,
-          "col": 3
-        },
-        {
-          "name": "Trough",
-          "type": "spinbox",
-          "row": 7,
-          "col":2
-        },
-    
-        {
           "name": "Scoring",
           "type": "heading",
-          "align": "center",
-          "col": 3
-    
-        },
-
-        {
-          "name": "Algae",
-          "type": "heading",
-          "row": 9,
-          "col": 1
-
+          "col":3
         },
         {
-          "name": "Net",
+          "name": "Fuel Scored: Transition Period",
           "type": "spinbox",
-          "col": 2,
-          "row": 9
+          "col": 3,
+          "batch": true
         },
         {
-          "name": "Proccesor",
+          "name": "Fuel Scored: Activation 1",
           "type": "spinbox",
-          "row": 9,
-          "col": 4
-
-        },
-
-        {
-          "name": "Coral",
-          "type": "heading",
-          "col": 1,
-          "row": 10
+          "col": 3,
+          "batch": true
         },
         {
-          "name": "Coral Trough",
+          "name": "Fuel Scored: Activation 2",
           "type": "spinbox",
-          "col": 2,
-          "row": 10
-        },
-        {
-          "name": "Coral L2",
-          "type": "spinbox",
-          "row": 10,
-          "col": 4
-        },
-        {
-          "name": "Coral L3",
-          "type": "spinbox",
-          "col": 2,
-          "row": 11
-
-        },
-        {
-          "name": "Coral L4",
-          "type": "spinbox",
-          "row": 11,
-          "col": 4
-        },
-        {
-          "name":"My nono square",
-          "type": "spacer",
-          "height": 15
+          "col": 3,
+          "batch": true
         },
         {
           "name": "Assists",
+          "type": "heading",
+          "col":3
+        },
+        {
+          "name" : "Passed",
+          "type": "spinbox",
+          "col": 3,
+          "batch": true
+        },
+        {
+          "name" : "Pushed",
+          "type": "spinbox",
+          "col": 3,
+          "batch": true
+        },
+        {
+          "name": "Pickup Locations",
+          "type": "heading",
+          "col":3
+        },
+        {
+          "name": "Ground",
+          "col": 3,
+          "type": "checkbox"
+        },
+        {
+          "name": "Human Player Station",
+          "col": 3,
+          "type": "checkbox"
+        },
+        {
+          "name": "Depot",
+          "col": 3,
+          "type": "checkbox"
+        },
+        {
+          "name": "Team Side During Activation",
           "type": "checkbox",
-          "col": 2,
-          "align": "center"
-        },
-        {
-          "name": "Rescore",
-          "type": "spinbox",
-          "col":2,
-          "align": "center"
-        },
-        {
-          "name": "Dropped Corals",
-          "type": "spinbox",
-          "col": 2,
-          "align": "center"
+          "col": 3,
+          "batch": true
         }
+
       ]
     },
     {
       "name": "Endgame",
       "widgets": [
         {
-          "name": "End Location",
+          "name": "Scoring",
+          "type": "heading"
+        },
+        {
+          "name": "Fuel Scored",
+          "type": "spinbox",
+          
+          "batch": true
+        },
+        {
+          "name": "Climb",
+          "type": "heading"
+        },
+        {
+          "name": "Level",
           "type": "radio",
           "options": [
-            "Deep",
-            "Shallow",
-            "Parked",
-            "None"
+            "None",
+            "1",
+            "2",
+            "3"
+            
           ],
-          "default": 3
+          "default": 0
+        },
+        {
+          "name": "Location",
+          "type": "radio",
+          "options": [
+            "None",
+            "Front",
+            "Back"
+            
+          ],
+          "default": 0
+        },
+        {
+          "name": "Position",
+          "type": "radio",
+          "options": [
+            "None",
+            "Left",
+            "Center",
+            "Right"
+            
+          ],
+          "default": 0
+        },
+        {
+          "name": "Flip Climb",
+
+          "type": "checkbox"
         },
         {
           "name": "Failed Climb",
           "type": "checkbox"
         },
         {
-          "name": "Robot Position",
-          "type": "radio",
-          "options": [
-            "1",
-            "2",
-            "3",
-            "None"
-          ],
-          "default": 3
+          "name": "Submission",
+          "type": "heading"
         },
-        {
-          "name": "Barge RP",
-          "type": "checkbox"
-        },
-
         {
           "name": "Mechanical Failures",
           "type": "text"
         },
+        
         {
         "name": "Scouter Name",
           "type": "text",

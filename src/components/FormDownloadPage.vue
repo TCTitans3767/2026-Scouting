@@ -40,26 +40,28 @@ import { computed } from "vue";
 import QrcodeVue from "qrcode.vue";
 import { useConfigStore, useWidgetsStore } from "@/common/stores";
 import { useRouter } from "vue-router";
-import confetti from "canvas-confetti";
-
+import confetti from "canvas-confetti"
+let bool = true;
 function launchConfetti() {
   confetti({
     particleCount: 100,
     spread: 160,
     gravity: 4,
-    
+    colors: ['#4c00b0', 'a000c8', 'fff']
   });
   confetti({
     particleCount: 100,
     spread: 80,
     gravity: 4,
     angle: 45,
+    colors: ['#4c00b0', 'a000c8', 'fff']
   });
   confetti({
     particleCount: 100,
     spread: 80,
     gravity: 4,
     angle: 135,
+    colors: ['#4c00b0', 'a000c8', 'fff']
   });
 }
 
@@ -74,12 +76,18 @@ const qrData = $computed(() => widgets.toCSVString(widgets.getWidgetsAsCSV(), ex
 const excludeHeaders = $ref(false);
 
 function clearForm() {
-  widgets.save();
-  
-  launchConfetti();
-  setTimeout(() => {
+  if (bool){
+    bool=false;
+    widgets.save();
+    let currentMatchNumber = parseInt(localStorage.getItem("matchNumber") || "1");
+    currentMatchNumber++;
+    localStorage.setItem("matchNumber", currentMatchNumber.toString());
+    launchConfetti();
+    setTimeout(() => {
     router.go(0); // Reload the page
-  }, 1000);
+    }, 1000);
+  }
+  
   
 }
 

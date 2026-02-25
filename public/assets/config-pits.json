@@ -1,6 +1,6 @@
 
   {
-    "heading": "Reefscape - 2025 (Pit Scouting)",
+    "heading": "Rebuilt - 2026 (Pit Scouting)",
     "logo": "logo.png",
     "skipTeamSelection": true,
     "pages": [
@@ -77,29 +77,20 @@
         "name": "Match Play",
         "widgets": [
           {
-            "name": "Can Pick Up",
+            "name": " Can go Through",
             "type": "multicheckbox",
             "options": [
-              "Ground Coral",
-              "Ground Algae",
-              "Reef 2.5",
-              "Reef 3.5"
+              "Trench",
+              "Bump"
             ]
           },
           {
-            "name": "Can Score In",
-            "type": "multicheckbox",
-            "options": [
-              "Trough",
-              "L2",
-              "L3",
-              "L4",
-              "Proccesor",
-              "Net"
-            ]
+            "name": "Hopper Size",
+            "type": "number"
+            
           },
           {
-            "name": "Scoring Methods",
+            "name": "Aiming",
             "type": "multicheckbox",
             "options": [
               "Manual",
@@ -107,39 +98,7 @@
             ]
           },
           {
-            "name": "Preferred Pickup Location",
-            "type": "dropdown",
-            "options": [
-              "Ground Coral",
-              "Ground Algae",
-              "Reef 2.5",
-              "Reef 3.5"
-            ],
-            "defaultOption": true
-          },
-          {
-            "name": "Preferred Scoring Location",
-            "type": "dropdown",
-            "options": [
-              "Trough",
-              "L2",
-              "L3",
-              "L4",
-              "Proccesor",
-              "Net"
-            ],
-            "defaultOption": true
-          },
-          {
-            "name": "Cycle Time Coral -> Reef",
-            "type": "number"
-          },
-          {
-            "name": "Cycle Time Algae -> Proccesor",
-            "type": "number"
-          },
-          {
-            "name": "Cycle Time Algae -> Net",
+            "name": "Balls/Second",
             "type": "number"
           },
           {
@@ -150,6 +109,17 @@
             "name": "Comments",
             "type": "textarea",
             "colspan": 3
+          },
+          {
+            "name": "Signature (optional :P)",
+            "type": "heading"
+          },
+          
+          
+          {
+            "name": "Get their autograph here",
+            "type": "label",
+            "file": "demo.png"
           }
         ]
       }

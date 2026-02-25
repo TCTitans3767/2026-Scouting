@@ -12,7 +12,7 @@
     </FormGroup>
     <FormGroup :show="isTBA" :label-type="LabelType.PlainText" name="Teams Loaded">{{ teamsLoadStatus }}</FormGroup>
     <FormGroup :show="isTBA" :label-type="LabelType.PlainText" name="Matches Loaded">{{ matchesLoadStatus }}</FormGroup>
-    <FormGroup :label-type="LabelType.LabelTag" id="match-level-input" name="Match Level">
+    <FormGroup :show="!isTBA" :label-type="LabelType.LabelTag" id="match-level-input" name="Match Level">
       <select id="match-level-input" v-model.number="matchLevel" :disabled="config.data.forceQualifiers">
         <option value="0">Qualifications</option>
         <option value="1">Playoffs</option>
@@ -39,6 +39,7 @@
         <option value="Blue">Blue</option>
       </select>
     </FormGroup>
+    
   </FormPage>
 </template>
 
@@ -50,6 +51,7 @@ import { getError, getTeamName, isFailed, TBAData } from "@/common/tba";
 import { LabelType } from "@/common/shared";
 import { computed, Ref } from "vue";
 import { useConfigStore, useTBAStore, useWidgetsStore } from "@/common/stores";
+import { watch } from "vue";
 
 interface Team {
   color: string;
@@ -65,18 +67,17 @@ const config = useConfigStore();
 const tba = useTBAStore();
 const widgets = useWidgetsStore();
 
-const selectType = $ref(0);
+const selectType = $ref(parseInt(localStorage.getItem("selectType") || "0"));
 let eventKey = $ref("");
-const matchLevel = $ref(0);
-const matchNumber = $ref(1);
-const selectedTeam = $ref(0);
-
+const matchLevel = $ref(parseInt(localStorage.getItem("matchLevel") || "0"));
+const selectedTeam = $ref(parseInt(localStorage.getItem("selectedTeam") || "0"));
+const matchNumber = $ref(parseInt(localStorage.getItem("matchNumber") || "1"));
+localStorage.setItem("matchNumber", matchNumber.toString());
 const teamNumberManual = $ref(0);
 const teamColorManual = $ref("Red");
 
 let teamsLoadStatus = $ref("");
 let matchesLoadStatus = $ref("");
-
 const teams = $ref<unknown[]>();
 const matches = $ref<unknown[]>();
 
@@ -99,7 +100,7 @@ const currentMatch = $computed(() => {
   matchList.sort((first: unknown, second: unknown) => diff(first, second, "match") || diff(first, second, "set"));
   return matchList[matchNumber - 1] ?? null;
 });
-
+loadTBAData();
 // The teams playing in the selected match
 const teamsList = $computed(() => {
   const result = new Array<Team>();
@@ -155,6 +156,26 @@ function loadTBAData() {
   matchesLoadStatus = "Loading...";
   tba.load(eventKey, "matches").then(value => updateStatus($$(matchesLoadStatus), $$(matches), value));
 }
+function resetLocalStorage(){
+  localStorage.clear();
+  localStorage.setItem("matchNumber", 1);
+  location.reload();
+}
+watch($$(selectedTeam), (newValue) => {
+  localStorage.setItem("selectedTeam", newValue.toString());
+});
+watch($$(selectType), (newValue) => {
+  localStorage.setItem("selectType", newValue.toString());
+});
+watch($$(matchLevel), (newValue) => {
+  localStorage.setItem("matchLevel", newValue.toString());
+});
+//cache new value 
+watch($$(matchNumber), (newValue) => {
+  localStorage.setItem("matchNumber", newValue.toString());
+});
+
+
 </script>
 
 <style>

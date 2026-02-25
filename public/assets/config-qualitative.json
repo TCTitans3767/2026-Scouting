@@ -1,5 +1,5 @@
 {
-  "heading": "Reefscape - 2025 (Qualitative Scouting)",
+  "heading": "Rebuilt - 2026 (Qualitative Scouting)",
   "logo": "logo.png",
   "pages": [
     {
@@ -24,7 +24,7 @@
           "col": 3
         },
         {
-          "name": "Handling",
+          "name": "Handling/Driving",
           "type": "dropdown",
           "options": [
             "1 (Worst)",
@@ -84,61 +84,48 @@
           ]
         },
         {
+          "name": "Shooting Freedom",
+          "type": "dropdown",
+          "options": [
+            "1 (Lowest)",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6 (Highest)"
+          ],
+          "row": 5,
+          "col": 3
+        },
+        {
           "type": "spacer",
-          "height": 20
+          "height": 5
         },
         {
           "name": "Pin Time",
           "type": "stopwatch"
         },
         {
-          "name": "Scoring Patterns",
-          "type": "positions",
-          "file": "field.png",
-          "allowMultiple": true,
-          "colspan": 3
+          "name": "Hopper Size",
+          "type": "number"
         },
         {
-          "name": "Common Scoring Locations",
+          "name": "Turret",
           "type": "multicheckbox",
           "options": [
-            "trough",
-            "L2",
-            "L3",
-            "L4",
-            "Proccesor",
-            "Barge"
+            "Auto-aiming",
+            "Auto-shooting"
           ]
         },
         {
+          "name": "Cycle Time",
+          "type": "stopwatch"
+        },
+       
+        
+        {
           "name": "Comments",
           "type": "textarea"
-        }
-      ]
-    },
-    {
-      "name": "Human Player Judgement",
-      "widgets": [
-        {
-          "name": "How many thrown in the net",
-          "type": "spinbox"
-        },
-        {
-          "name": "How Many thrown to ground",
-          "type": "spinbox"
-        },
-        {
-          "name": "How many throws missed",
-          "type": "spinbox"
-        },
-        {
-          "name": "Get the human player's autograph here!",
-          "type": "heading"
-        },
-        {
-          "name": "Get their autograph here",
-          "type": "label",
-          "file": "demo.png"
         }
       ]
     }
