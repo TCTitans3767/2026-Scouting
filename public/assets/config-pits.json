@@ -1,6 +1,6 @@
 
   {
-    "heading": "Reefscape - 2025 (Pit Scouting)",
+    "heading": "Rebuilt - 2026 (Pit Scouting)",
     "logo": "logo.png",
     "skipTeamSelection": true,
     "pages": [
@@ -86,11 +86,11 @@
           },
           {
             "name": "Hopper Size",
-            "type": "spinbox"
+            "type": "number"
             
           },
           {
-            "name": "Scoring Methods",
+            "name": "Aiming",
             "type": "multicheckbox",
             "options": [
               "Manual",
@@ -98,7 +98,7 @@
             ]
           },
           {
-            "name": "Cycle Time Algae",
+            "name": "Balls/Second",
             "type": "number"
           },
           {
