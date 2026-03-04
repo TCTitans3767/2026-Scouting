@@ -21,26 +21,6 @@
         "name": "Robot",
         "widgets": [
           {
-            "name": "Height",
-            "type": "number"
-          },
-          {
-            "name": "Length",
-            "type": "number"
-          },
-          {
-            "name": "Width",
-            "type": "number"
-          },
-          {
-            "name": "Number of Batteries",
-            "type": "number"
-          },
-          {
-            "name": "Weight",
-            "type": "number"
-          },
-          {
             "name": "Drivetrain",
             "type": "dropdown",
             "options": [
@@ -50,32 +30,40 @@
               "Mecanum",
               "Other"
             ]
-          },
-          {
-            "name": "Swerve Motor Type",
-            "type": "dropdown",
-            "options": [
-              "Neo",
-              "Falcon",
-              "Cim",
-              "Kraken"
-            ]
-          },
-          {
-            "name": "Swerve Type",
-            "type": "dropdown",
-            "options": [
-              "No swerve",
-              "Mk 4",
-              "Mk 4i",
-              "Custom"
-            ]
           }
         ]
       },
       {
         "name": "Match Play",
         "widgets": [
+          {
+            "name": "Can Auto Climb?",
+            "type": "radio",
+            "options": [
+              "Yes",
+              "No"
+            ]
+          },
+          {
+            "name": "Actions you can do in auto",
+            "type": "multicheckbox",
+            "options": [
+              "Go to center",
+              "Go to depot",
+              "Go to outpost",
+              "Just shoot",
+              "Climb",
+              "None"
+            ]
+          },
+          {
+            "name": "Do you need auto help",
+            "type": "radio",
+            "options": [
+              "Yes",
+              "No"
+            ]
+          },
           {
             "name": " Can go Through",
             "type": "multicheckbox",
@@ -90,20 +78,33 @@
             
           },
           {
+            "name": "Climb Level",
+            "type": "multicheckbox",
+            "options": [
+              "None",
+              "1",
+              "2",
+              "3"
+            ]
+          },
+          {
+            "name": "Climb Location",
+            "type": "multicheckbox",
+            "options": [
+              "Left Peg",
+              "Right Peg",
+              "Left Side",
+              "Right Side",
+              "Center"
+            ]
+          },
+          {
             "name": "Aiming",
             "type": "multicheckbox",
             "options": [
               "Manual",
               "Auto"
             ]
-          },
-          {
-            "name": "Balls/Second",
-            "type": "number"
-          },
-          {
-            "name": "Climb Time",
-            "type": "number"
           },
           {
             "name": "Comments",
@@ -114,7 +115,6 @@
             "name": "Signature (optional :P)",
             "type": "heading"
           },
-          
           
           {
             "name": "Get their autograph here",
