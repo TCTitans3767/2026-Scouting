@@ -106,20 +106,12 @@
           "type": "stopwatch"
         },
         {
-          "name": "Hopper Size",
-          "type": "number"
-        },
-        {
           "name": "Turret",
           "type": "multicheckbox",
           "options": [
             "Auto-aiming",
             "Auto-shooting"
           ]
-        },
-        {
-          "name": "Cycle Time",
-          "type": "stopwatch"
         },
        
         
