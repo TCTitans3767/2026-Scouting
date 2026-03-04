@@ -3,6 +3,17 @@
   "logo": "logo.png",
   "pages": [
     {
+      "name": "Qualitative Auto",
+      "widgets": [
+        {
+          "name": "Auto Path",
+          "type": "label",
+          "file": "field.png"
+
+        }
+      ]
+    },
+    {
       "name": "Qualitative Scouting",
       "widgets": [
         {
@@ -18,12 +29,6 @@
           ]
         },
         {
-          "name": "Expansion Limits",
-          "type": "spinbox",
-          "row": 1,
-          "col": 3
-        },
-        {
           "name": "Handling/Driving",
           "type": "dropdown",
           "options": [
@@ -34,6 +39,12 @@
             "5",
             "6 (Best)"
           ]
+        },
+        {
+          "name": "Fouls",
+          "type": "heading",
+          "row": 1,
+          "col": 3
         },
         {
           "name": "Pinning",
@@ -57,18 +68,6 @@
           "col": 3
         },
         {
-          "name": "Force",
-          "type": "dropdown",
-          "options": [
-            "1 (Lowest)",
-            "2",
-            "3",
-            "4",
-            "5",
-            "6 (Highest)"
-          ]
-        },
-        {
           "name": "Safe Zone Contact",
           "type": "spinbox",
           "row": 4,
@@ -84,26 +83,8 @@
           ]
         },
         {
-          "name": "Shooting Freedom",
-          "type": "dropdown",
-          "options": [
-            "1 (Lowest)",
-            "2",
-            "3",
-            "4",
-            "5",
-            "6 (Highest)"
-          ],
-          "row": 5,
-          "col": 3
-        },
-        {
           "type": "spacer",
           "height": 5
-        },
-        {
-          "name": "Pin Time",
-          "type": "stopwatch"
         },
         {
           "name": "Turret",
@@ -113,7 +94,10 @@
             "Auto-shooting"
           ]
         },
-       
+        {
+          "name": "Climb Time",
+          "type": "number"
+        },
         
         {
           "name": "Comments",
