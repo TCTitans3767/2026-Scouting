@@ -26,7 +26,7 @@ onMounted(() => {
     if (ctx.value) {
        const backgroundImage = new Image();
 
-      backgroundImage.src = '${import.meta.env.BASE_URL}/assets/field.png'; // Set image source
+      backgroundImage.src = '${import.meta.env.BASE_URL}assets/field.png'; // Set image source
       // Make sure the image is loaded before drawing
       backgroundImage.onload = () => {
         ctx.drawImage(backgroundImage, 0, 0, canvas.width, canvas.height);
