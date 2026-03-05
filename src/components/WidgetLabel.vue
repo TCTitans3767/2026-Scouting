@@ -24,6 +24,14 @@ onMounted(() => {
   if (canvas.value) {
     ctx.value = canvas.value.getContext("2d");
     if (ctx.value) {
+       const backgroundImage = new Image();
+
+      // Make sure the image is loaded before drawing
+      backgroundImage.onload = () => {
+        ctx.drawImage(backgroundImage, 0, 0, canvas.width, canvas.height);
+        // Continue drawing other elements over the background
+      };
+      backgroundImage.src = '/public/assets/field.png'; // Set image source
       ctx.value.lineWidth = 2;
       ctx.value.strokeStyle = "#fff";
       ctx.value.lineCap = "round";

@@ -7,8 +7,7 @@
       "widgets": [
         {
           "name": "Auto Path",
-          "type": "label",
-          "file": "field.png"
+          "type": "label"
 
         }
       ]
