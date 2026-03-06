@@ -110,16 +110,6 @@
             "name": "Comments",
             "type": "textarea",
             "colspan": 3
-          },
-          {
-            "name": "Signature (optional :P)",
-            "type": "heading"
-          },
-          
-          {
-            "name": "Get their autograph here",
-            "type": "label",
-            "file": "demo.png"
           }
         ]
       }
