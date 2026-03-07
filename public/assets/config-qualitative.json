@@ -6,7 +6,7 @@
       "name": "Qualitative Auto",
       "widgets": [
         {
-          "name": "Very short description of the auto path",
+          "name": "Very short description of the auto path:",
           "type": "heading"
         },
         {
