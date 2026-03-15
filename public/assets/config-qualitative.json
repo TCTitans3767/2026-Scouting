@@ -6,12 +6,15 @@
       "name": "Qualitative Auto",
       "widgets": [
         {
-          "name": "Very short description of the auto path:",
+          "name": "Draw the Auto Path:",
           "type": "heading"
         },
         {
-          "name": "Auto Path",
-          "type": "textarea"
+          "name": "AutoPath",
+          "type": "positions",
+          "file": "field.png",
+          "width": 723,
+          "height": 300
         }
       ]
     },

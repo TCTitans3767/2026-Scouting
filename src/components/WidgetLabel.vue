@@ -15,6 +15,7 @@
 
 <script setup lang="ts">
 import { ref, onMounted } from "vue";
+import bgImage from '/assets/field.png';
 
 const canvas = ref<HTMLCanvasElement | null>(null);
 const isDrawing = ref(false);
@@ -22,8 +23,14 @@ const ctx = ref<CanvasRenderingContext2D | null>(null);
 
 onMounted(() => {
   if (canvas.value) {
-    ctx.value = canvas.value.getContext("2d");   
+    ctx.value = canvas.value.getContext("2d");
+    const img = new Image();
+    img.src = bgImage;
+
     if (ctx.value) {
+      img.onload = () => {
+        ctx.drawImage(img,0,0,canvas.width,canvas.height);
+      };
       ctx.value.lineWidth = 2;
       ctx.value.strokeStyle = "#fff";
       ctx.value.lineCap = "round";

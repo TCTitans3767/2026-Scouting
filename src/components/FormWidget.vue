@@ -45,8 +45,8 @@ let border = $ref("none");
 // Table containing metadata for each widget type
 const info = {
   dropdown:      { class: WidgetDropdown,      label: LabelType.LabelTag  },
-  heading:       { class: WidgetHeading,       label: LabelType.None,     },
-  label:         { class: WidgetLabel,         label: LabelType.None,     },
+  heading:       { class: WidgetHeading,       label: LabelType.None      },
+  label:         { class: WidgetLabel,         label: LabelType.None      },
   text:          { class: WidgetInput,         label: LabelType.LabelTag  },
   number:        { class: WidgetInput,         label: LabelType.LabelTag  },
   checkbox:      { class: WidgetInput,         label: LabelType.LabelTag  },
