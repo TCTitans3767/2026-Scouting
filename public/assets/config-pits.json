@@ -30,6 +30,18 @@
               "Mecanum",
               "Other"
             ]
+          },
+          {
+            "name": "Shooter Type",
+            "type": "radio",
+            "options": [
+              "Fixed",
+              "Turret"
+            ]
+          },
+          {
+            "name": "Shooter Speed(Fuel Per Second)",
+            "type": "number"
           }
         ]
       },
