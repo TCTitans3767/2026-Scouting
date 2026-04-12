@@ -69,14 +69,6 @@
             ]
           },
           {
-            "name": "Do you need auto help",
-            "type": "radio",
-            "options": [
-              "Yes",
-              "No"
-            ]
-          },
-          {
             "name": " Can go Through",
             "type": "multicheckbox",
             "options": [

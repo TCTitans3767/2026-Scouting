@@ -96,9 +96,16 @@
           "type": "multicheckbox",
           "options": [
             "Fixed",
-            "Moving turret",
-            "Auto Aim",
-            "Auto Shoot"
+            "Moving"
+          ]
+        },
+        {
+          "name": "Robot type",
+          "type": "dropdown",
+          "options": [
+            "Dumper Bot",
+            "Stationary Turret",
+            "Move and Shoot"
           ]
         },
         {
