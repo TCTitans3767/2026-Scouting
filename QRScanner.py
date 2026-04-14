@@ -2,6 +2,7 @@ import cv2
 import csv
 from pyzbar.pyzbar import decode
 import os
+os.environ["OPENCV_VIDEOIO_MSMF_ENABLE_HW_TRANSFORMS"] = "0"
 from tkinter import messagebox
 
 # Name of the CSV file
@@ -35,7 +36,7 @@ def write_to_csv(data_string):
 def scan_webcam():
     """Opens webcam and continuously scans for QR codes."""
     # Open the webcam (0 is usually the default camera)
-    cap = cv2.VideoCapture(0)
+    cap = cv2.VideoCapture(1)
     
     if not cap.isOpened():
         print("Error: Could not open webcam.")
